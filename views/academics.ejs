@@ -1,0 +1,120 @@
+<%- include('includes/head.ejs') %>
+
+<div class="notice">
+        <p><a href="">2019/2020 Admission Forms</a> are now available! Know more about the requirements for this program? <a href="#">Click here</a></p>
+    </div>
+    <div class="row">
+    <div class="col-sm-4">
+    <div class="content">
+        <hr class="line-divider" size="240">
+        <ul>
+            <li><a href="">Academics Menu</a></li>
+          
+            <li class="lister" id="course">Course schedule</li> 
+            <li class="lister" id="postgraduate">Postgraduate</li>
+            <li class="lister" id="support"><a href="Javascript:Void(0);">Student support</a></li>
+            <li class="lister" id="short"><a href="Javascript:Void(0);">Short courses</a></li>
+            <li class="lister" id="training"><a href="Javascript:Void(0);">Training</a></li>
+            <li class="lister" id="work"><a href="Javascript:Void(0);">Workshop</a></li>
+            <li class="lister" id="calendar"><a href="Javascript:Void(0);">Academic calendar</a></li>
+            
+            
+           
+        </ul>
+    </div>
+    </div>
+    <div class="col-sm-4">
+    <div>
+            <div class="main-content">
+                    <h3><b class="mytext">ACADEMICS SECTION</b></h3>
+                </div>
+   
+    
+        <span class="getting-started" id="getting-started">
+            <h2 style="color: blue">Course Schedule</h2>
+
+            <p><b>Graduate Studies - Master's in Biostatistics</b></p>
+            
+            <p>
+            The algorithms used to analyze scientific evidence are constantly improving and becoming increasingly complex, and a Master's in Biostatistics will help students prepare for a career in the biology sciences field studying various organisms. Biostatistics majors learn how to record pertinent information from a small sample size of organisms and, using that information, make valid inferences about the actual population from where they came.
+        </p>
+        <p><b>What classes are required to complete the master's in Biostatistics</b></p>
+        <p>A Master's in Biostatistics will help teach students the following basic real-world job duties:</p>
+        <ul>
+            <li>Write a conclusion and make interferences about data and effectively communicate the inferences with peers and colleagues.</li>
+            <li>Create programs in two statistical packages.</li>
+            <li>Design basic research studies based on my discovery earlier.</li>
+            <li>Uses analysis to answer questions about results and probability of an outcome.</li>
+        </ul>
+        <p>At the master degree level, students will likely be required to take classes that complement their already extensive knowledge of biology and the sciences. Some basic required coursework might include Statistical Programming, the Basics of Applied Biostatistics, and Statistics for Learning and Discovery.
+
+                Once coursework has been completed, candidates for a Master's in Biostatistics might be required to complete a special biology research and analysis project and take a comprehensive exam.</p>
+        </span>
+
+        
+    
+    </div>
+  </div>
+</div>
+
+
+<script>
+        $(document).ready(function(){
+            var p = document.getElementById('getting-started');
+            var text = document.getElementsByClassName('mytext');
+            
+            $('#course').on('click', function(){
+                p.innerText = 'This is a brief History of the Department';
+                text[0].innerText = 'COURSE';
+                
+            })
+ 
+          
+            $('#postgraduate').on('click', function(){
+                p.innerText = 'we display our Objective and vision here';
+                text[0].innerText = 'POSTGRADUATE';
+             //    text[0].style.color = 'red';
+                
+            })
+            
+ 
+            $('#support').on('click', function(){
+                p.innerText = 'we display about our faculty here';
+                text[0].innerText = 'STUDENT SUPPORT';
+             //    text[0].style.color = 'red';
+         })
+
+         $('#short').on('click', function(){
+                p.innerText = 'we display about our faculty here';
+                text[0].innerText = 'SHORT COURSES';
+             //    text[0].style.color = 'red';
+         })
+
+         $('#training').on('click', function(){
+                p.innerText = 'we display about our faculty here';
+                text[0].innerText = 'TRAINING';
+             //    text[0].style.color = 'red';
+         })
+ 
+
+         $('#work').on('click', function(){
+                p.innerText = 'we display about our faculty here';
+                text[0].innerText = 'WORKSHOP';
+             //    text[0].style.color = 'red';
+         })
+
+
+         $('#calendar').on('click', function(){
+                p.innerText = 'we display about our faculty here';
+                text[0].innerText = 'ACADEMIC CALENDAR';
+             //    text[0].style.color = 'red';
+         })
+ 
+        })
+        
+        </script>
+
+    
+
+
+   

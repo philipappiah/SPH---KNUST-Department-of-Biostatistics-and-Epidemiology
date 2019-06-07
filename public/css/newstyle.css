@@ -33,6 +33,78 @@ float: left;
 
 
 }
+
+.main-content-academics{
+    position: absolute;
+left:15%;
+top:29%;
+
+width:50%;
+
+}
+
+.footer-about{
+    position: absolute;
+    top:120%;
+    bottom: 5%;
+    left:20%;
+
+}
+
+.footer-about .columns{
+    display: inline-block;
+    padding: 10px;
+    
+    
+}
+
+.footer-about .columns ul li{
+    list-style-type:none;
+}
+.footer-about .columns ul li a{
+ 
+   text-decoration: none;
+  
+}
+
+
+.footer-about p a{
+  text-decoration: none;
+  margin-left: 20%;
+}
+
+
+.footer-academics{
+    position: absolute;
+    top:120%;
+    bottom: 5%;
+    left:20%;
+
+}
+
+.footer-academics .columns{
+    display: inline-block;
+    padding: 10px;
+    
+    
+}
+
+.footer-academics .columns ul li{
+    list-style-type:none;
+}
+.footer-academics .columns ul li a{
+ 
+   text-decoration: none;
+  
+}
+
+
+.footer-academics p a{
+  text-decoration: none;
+  margin-left: 20%;
+}
+
+
 nav ul{
 
 top:0;
@@ -57,6 +129,102 @@ border-radius: 1px solid;
 
 }
 
+.slide-content{
+    margin-left:38%;
+    width: 110%;
+}
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    .slide-content{
+        margin-left:38%;
+        width: 110%;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+   
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+ 
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+  
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    .slide-content{
+        margin-left:3%;
+        width: 100%;
+    }
+    nav ul li.search{
+        margin-left: 0;
+        border-radius: 1px solid;
+        
+        }
+        .content{
+            display: none;
+            
+            }
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    nav ul li.search{
+        margin-left: 0;
+        border-radius: 1px solid;
+        
+        }
+    
+    .slide-content{
+        margin-left:3%;
+        width: 100%;
+    }
+    .content{
+    display: none;
+        
+        }
+    
+  }
 
 
 
@@ -70,6 +238,24 @@ border-radius: 1px solid;
     overflow: hidden;
     cursor: pointer;
   }
+
+  .dropdownerin {
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .dropdownerin .dropbtnerin {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color:black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+  }
+
 
   
 
@@ -94,7 +280,27 @@ border-radius: 1px solid;
     z-index: 1;
     cursor: pointer;
   }
-  
+  .dropdown-contenterin {
+    display: none;
+     
+    position: absolute;
+    left:100%;
+    top:73%;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: pointer;
+  }
+  .dropdown-contenterin a:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+  }
+
+ 
+
+ 
 
   .dropdown-contenter a:hover {
     background-color: #ddd;
@@ -106,6 +312,24 @@ border-radius: 1px solid;
     color: black;
     cursor: pointer;
   }
+  .dropbtnerin a:hover{
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+  }
+
+  .next ul li:hover{
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+
+}
+
+
+  .dropbtnerin{
+      border: none;
+      background-color:inherit
+  }
 
   
 
@@ -114,10 +338,34 @@ border-radius: 1px solid;
     color: black;
     cursor: pointer;
   }
+
+  
+  .dropbtnerin:hover{
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+  }
   
   /* Show the dropdown menu when the user moves the mouse over the dropdown button */
   .dropdowner:hover .dropdown-contenter {
     display: block;
+    
+  }
+
+  .dropbtnerin:hover .dropdown-contenterin {
+    display:block;
+
+    
+  }
+
+  .dropdown-contenterin a {
+    float: left;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    cursor: pointer;
     
   }
   /* Style the links inside the dropdown */
@@ -150,6 +398,8 @@ border-radius: 1px solid;
     float: left;
     overflow: hidden;
   }
+
+  
 
   .top-list:hover .nexter{
       display: block;
@@ -222,7 +472,7 @@ font-family: 'Times New Roman', Times, serif;
 cursor: pointer;
 }
 .content{
-margin-left: 9%;
+margin-left: 40%;
 
 }
 .content ul li{
@@ -270,6 +520,14 @@ margin-top:5%;
 
 
 }
+
+
+
+.lister:hover{
+cursor: pointer;
+color: red;
+}
+
 .content-right ul li{
 padding: 10px;
 font-size: 13px;
@@ -312,21 +570,18 @@ color: blue;
 }
 
 .main-content{
-position: absolute;
-left:26%;
-top:30%;
-width:50%;
-background-color:rgba(135,206,250,0.4)
+
+background-color:rgba(135,206,250,0.4);
+border:1px #fff solid;
+border-radius: 0%;
+text-align: center;
 
 }
 
-.getting-started{
-position: absolute;
-left:26%;
-top:45%;
-width:50%;
-    
+.lister a:hover{
+    color:red;
 }
+
 
 .footer{
    
@@ -337,174 +592,22 @@ width:50%;
 }
 
 
-@media only screen and (max-width: 600px) {
-  .content{
-    display: none;
-
-}
 
 
-
-.getting-started{
-    top:72%;
-    left:21%;
-
-}
-.notice{
-    margin-top: -9px;
-
-}
-.content-right{
-    display: none;
-}
-
-#getting-started{
-display: none;
-}
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
 
 
 
 
-.search{
-    margin-left: -20%;
-
-}
-
-.main-content{
-    position: relative;
-    margin-top: 20%;
-    width: 90%;
-    margin-left: -15%;
-    
-
-}
-
-.notice p{
-    margin-left: 1%;
-}
-
-.footer{
-    top:250%;
-}
-}
-
-@media only screen and (max-width: 400px) {
-  .content{
-    display: none;
-
-}
 
 
 
-.getting-started{
-    top:72%;
-    left:21%;
-
-}
-.notice{
-    display: none;
-
-}
-.content-right{
-    display: none;
-}
-.getting-started{
-    
-    margin-top: 50%;
-
-}
-
-.notice p{
-    margin-left: 1%;
-}
-}
-
-@media screen and (max-width: 768px){
-.content{
-    display: none;
-
-}
 
 
 
-.getting-started{
-    top:72%;
-    left:21%;
-
-}
-.notice{
-    margin-top: -9px;
-
-}
-.content-right{
-    display: none;
-}
-.main-content{
-    top:48%;
-    left:20%;
-
-}
-
-.notice p{
-    margin-left: 1%;
-}
-}
-
-
-@media only screen and (max-width: 1500px){
-
-    .content{
-        display: none;
-    
-    }
-    .getting-started{
-        top:72%;
-        left:21%;
-    
-    }
-    .content-right{
-        display: none;
-    }
-    .main-content{
-        top:48%;
-        left:20%;
-    
-    }
-    .notice p{
-        margin-left: 1%;
-    }
-    .footer{
-        top:100%;
-    }
-    
-
-}
-@media only screen and (max-width: 1200px){
-.content{
-    display: none;
-
-}
-.getting-started{
-    top:72%;
-    left:21%;
-
-}
-.content-right{
-    display: none;
-}
-.main-content{
-    top:48%;
-    left:20%;
-
-}
-.notice p{
-    margin-left: 1%;
-}
-
-.footer{
-    top:150%;
-}
-}
 
 
 .main-content .download-notice .head{

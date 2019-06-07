@@ -1,0 +1,114 @@
+<%- include('includes/head.ejs') %>
+
+<div class="notice">
+        <p><a href="">2019/2020 Admission Forms</a> are now available! Know more about the requirements for this program? <a href="#">Click here</a></p>
+    </div>
+    <div class="row">
+    <div class="col-sm-4">
+    <div class="content">
+        <hr class="line-divider" size="240">
+        <ul>
+            <li><a href="">Research</a></li>
+         
+            <li class="lister" id="supervisor">Supervisors</li> 
+            <li class="lister" id="latest">Latest research</li>
+            <li class="lister" id="funding"><a href="Javascript:Void(0);">Funding</a></li>
+            <li class="list" id="collaboration"><a href="Javascript:Void(0);">Collaborations</a></li>
+            <div class="next" style="margin-top: -25px;">
+                <ul>
+                    <li id="npc">National Population Council</li>
+                    <li id="gss">Ghana statistical Service</li>
+                    <li id="ghs">Ghana Health Service</li>
+                    
+                    <li id="ibs">International Biometric Society (IBS)</li>
+                    <li id="teg">Tropical Epidemiological Group (TEG) - LSHTM</li>
+                </ul>
+            </div>
+            
+            <!-- <li class="lister" id="students"><a href="Javascript:Void(0);">Students Life</a></li> -->
+            
+           
+        </ul>
+    </div>
+    </div>
+    <div class="col-sm-4">
+    <div>
+            <div class="main-content">
+                    <h3><b class="mytext">RESEARCH</b></h3>
+                </div>
+   
+        <span class="getting-started" id="getting-started">
+           
+        </span>
+
+        
+    
+    </div>
+  </div>
+</div>
+
+<script>
+        $(document).ready(function(){
+            var p = document.getElementById('getting-started');
+            var text = document.getElementsByClassName('mytext');
+            
+            $('#supervisor').on('click', function(){
+                p.innerText = 'This is a brief History of the Department';
+                text[0].innerText = 'SUPERVISOR';
+                
+            })
+ 
+          
+            $('#latest').on('click', function(){
+                p.innerText = 'we display our Objective and vision here';
+                text[0].innerText = 'LATEST RESEARCH';
+             //    text[0].style.color = 'red';
+                
+            })
+            
+ 
+            $('#funding').on('click', function(){
+                p.innerText = 'we display about our faculty here';
+                text[0].innerText = 'FUNDING';
+             //    text[0].style.color = 'red';
+         })
+
+         $('#collaboration').on('click', function(){
+                p.innerText = 'we display about our faculty here';
+                text[0].innerText = 'COLLABORATIONS';
+             //    text[0].style.color = 'red';
+         })
+ 
+         $('#npc').on('click', function(){
+                p.innerText = 'we display about our faculty here';
+                text[0].innerText = 'NATIONAL POPULATION COUNCIL';
+             //    text[0].style.color = 'red';
+         })
+
+         $('#gss').on('click', function(){
+                p.innerText = 'we display about our faculty here';
+                text[0].innerText = 'GHANA STATISTICAL SERVICE';
+             //    text[0].style.color = 'red';
+         })
+
+         $('#ghs').on('click', function(){
+                p.innerText = 'we display about our faculty here';
+                text[0].innerText = 'GHANA HEALTH SERVICE';
+             //    text[0].style.color = 'red';
+         })
+
+         $('#ibs').on('click', function(){
+                p.innerText = 'we display about our faculty here';
+                text[0].innerText = 'INTERNATIONAL BIOMETRIC SOCIETY (IBS)';
+             //    text[0].style.color = 'red';
+         })
+
+         $('#teg').on('click', function(){
+                p.innerText = 'we display about our faculty here';
+                text[0].innerText = 'TROPICAL EPIDEMIOLOGICAL GROUP (TEG) - LSHTM';
+             //    text[0].style.color = 'red';
+         })
+ 
+        })
+        
+        </script>

@@ -3,7 +3,8 @@
 <div class="notice">
         <p><a href="">2019/2020 Admission Forms</a> are now available! Know more about the requirements for this program? <a href="#">Click here</a></p>
     </div>
-    
+ <div class="row">
+    <div class="col-sm-4">
     <div class="content">
         <hr class="line-divider" size="240">
         <ul>
@@ -11,36 +12,24 @@
             
                 
                 
-            <li class="list"><a href="">Welcome Message</a></li>
-            <div class="next" id="next">
-                    <li class="nest1" ><a href="">Welcome Message</a></li>
-                    <li class="nest1"><a href="">Brief History</a></li>
-                    <li class="nest1"><a href="">Objective and Vision</a></li>
-                    <li class="nest1"><a href="">Faculty</a></li>
-                </div>
-            <li class="list"><a href="">Brief History</a></li>
-            <div class="next" id="next">
-                    <li class="nest1" ><a href="">Welcome Message</a></li>
-                    <li class="nest1"><a href="">Brief History</a></li>
-                    <li class="nest1"><a href="">Objective and Vision</a></li>
-                    <li class="nest1"><a href="">Faculty</a></li>
-            </div>
-            <li class="list"><a href="">Objective and Vision</a></li>
-            <li class="list"><a href="">Faculty</a></li>
-            <li class="list"><a href="">Staff</a></li>
-            <li class="list"><a href="">Students Life</a></li>
+            <li class="lister"><a href="">Welcome Message</a></li>
+           
+            <li class="lister" id="brief">Brief History</li>
+            
+            <li class="lister" id="objective">Objective and Vision</li>
+            <li class="lister" id="faculty"><a href="Javascript:Void(0);">Faculty</a></li>
+            <li class="lister" id="students"><a href="Javascript:Void(0);">Students Life</a></li>
            
         </ul>
     </div>
-    <div class="main-content">
-        <span class="download-notice" id="download-notice">
-        <h1 class="head">Head of Department's Welcome Message</h1>
-        
-       </span>
-       <br>
-       
+   
     </div>
+    <div class="col-sm-4">
     <div>
+            <div class="main-content">
+                <h3><b class="mytext">Message from the head of department</b></h3>
+            </div>
+
         <span class="getting-started" id="getting-started">
             
             <p>
@@ -56,6 +45,49 @@
                 </p>
         </span>
     </div>
+    </div>
+</div>
 
 
-<%- include('includes/foot.ejs') %>
+   
+       <script>
+       $(document).ready(function(){
+           var p = document.getElementById('getting-started');
+           var text = document.getElementsByClassName('mytext');
+           
+           $('#brief').on('click', function(){
+               p.innerText = 'This is a brief History of the Department';
+               text[0].innerText = 'This is a brief History of the Department';
+               
+           })
+
+         
+           $('#objective').on('click', function(){
+               p.innerText = 'we display our Objective and vision here';
+               text[0].innerText = 'Objectives and Vision';
+            //    text[0].style.color = 'red';
+               
+           })
+           
+
+           $('#faculty').on('click', function(){
+               p.innerText = 'we display about our faculty here';
+               text[0].innerText = 'Faculty';
+            //    text[0].style.color = 'red';
+        })
+
+
+        $('#students').on('click', function(){
+               p.innerText = 'we display about our faculty here';
+               text[0].innerText = 'STUDENTS LIFE';
+            //    text[0].style.color = 'red';
+        })
+       })
+       
+       </script>
+    
+       
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    </body>
