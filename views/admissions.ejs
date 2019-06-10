@@ -8,10 +8,10 @@
     <div class="content">
         <hr class="line-divider" size="240">
         <ul>
-            <li><a href="">Admissions</a></li>
+            <li><a href=""><b><u>Admissions Menu</u></b></a></li>
          
-            <li class="lister" id="postgraduate">Postgraduate</li>
-            <li class="lister" id="international"><a href="Javascript:Void(0);">International</a></li>
+            <li class="postgraduate" id="postgraduate">Postgraduate</li>
+            <li class="international" id="international"><a href="Javascript:Void(0);">International</a></li>
             
             <!-- <li class="lister" id="students"><a href="Javascript:Void(0);">Students Life</a></li> -->
             
@@ -51,25 +51,34 @@
     </div>
   </div>
 </div>
+<%- include('includes/foot.ejs') %>
 
 <script>
         $(document).ready(function(){
             var p = document.getElementById('getting-started');
             var text = document.getElementsByClassName('mytext');
+
+            var postgraduate = document.getElementsByClassName('postgraduate');
+            var international = document.getElementsByClassName('international');
+
+
+            var i;
+            for (i = 0; i < postgraduate.length; i++) {
+                 postgraduate[i].onclick = function() {
+                    p.innerText = 'POSTGRADUATE ADMISSIONS';
+                   text[0].innerText = 'POSTGRADUATE';
+
+                 }
+            }
+            for (i = 0; i < international.length; i++) {
+                 international[i].onclick = function() {
+                    p.innerText = 'INTERNATIONAL ADMISSIONS';
+                   text[0].innerText = 'INTERNATIONAL';
+
+                 }
+            }
           
-            $('#postgraduate').on('click', function(){
-                p.innerText = 'we display our Objective and vision here';
-                text[0].innerText = 'POSTGRADUATE';
-             //    text[0].style.color = 'red';
-                
-            })
-            
- 
-            $('#international').on('click', function(){
-                p.innerText = 'we display about our faculty here';
-                text[0].innerText = 'INTERNATIONAL';
-             //    text[0].style.color = 'red';
-         })
+        
  
         })
         

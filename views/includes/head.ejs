@@ -48,39 +48,39 @@
 
                 <div class="dropdowner">
                         <button class="dropbtner"><a href="/about">About Us</a>
-                          
+                          <i <% if (index||academics||admissions||news||research){%> style = "display: none"<%} %> class="fa fa-caret-down"></i>
                         </button>
-                        <div class="dropdown-contenter">
-                          <a href="Javascript:void(0)">Welcome message</a>
-                          <a href="Javascript:void(0)" >Brief History</a>
-                          <a href="Javascript:void(0)" >Objective and vision</a>
-                          <a href="Javascript:void(0)" >Faculty</a>
-                          <a href="Javascript:void(0)" >Students life</a>
+                        <div class="dropdown-contenter" <% if (index||academics||admissions||news||research){%> style = "display: none"<%} %> >
+                         
+                          <a class="brief" href="Javascript:void(0)" >Brief History</a>
+                          <a class="objectives" href="Javascript:void(0)" >Objective and vision</a>
+                          <a class="faculty" href="Javascript:void(0)" >Faculty</a>
+                          <a class="students" href="Javascript:void(0)"  >Students life</a>
                         </div>
                 </div>
 
                 <div class="dropdowner">
                         <button class="dropbtner"><a href="/academics">Academics</a>
-                          <i class="fa fa-caret-down"></i>
+                          <i <% if (index||about||admissions||news||research){%> style = "display: none"<%} %> class="fa fa-caret-down"></i>
                         </button>
-                        <div class="dropdown-contenter">
-                          <a href="#">Course schedule</a>
-                          <a href="#">Postgraduate courses</a>
-                          <a href="#">Student support</a>
-                          <a href="#">Short courses</a>
-                          <a href="#">Training</a>
-                          <a href="#">Workshop</a>
-                          <a href="#">Academic calender</a>
+                        <div class="dropdown-contenter" <% if (index||about||admissions||news||research){%> style = "display: none"<%} %>>
+                          <a class="courses" href="Javascript:void(0)"  >Course schedule</a>
+                          <a class="postgraduates" href="Javascript:void(0)"  >Postgraduate courses</a>
+                          <a class="students" href="Javascript:void(0)">Student support</a>
+                          <a class="short-courses" href="Javascript:void(0)">Short courses</a>
+                          <a class="training" href="Javascript:void(0)">Training</a>
+                          <a class="workshop" href="Javascript:void(0)">Workshop</a>
+                          <a class="calendar" href="Javascript:void(0)">Academic calender</a>
                         </div>
                 </div>
 
                 <div class="dropdowner">
                         <button class="dropbtner"><a href="/admissions">Admissions</a>
-                          <i class="fa fa-caret-down"></i>
+                          <i <% if (index||academics||about||news||research){%> style = "display: none"<%} %> class="fa fa-caret-down"></i>
                         </button>
-                        <div class="dropdown-contenter">
-                          <a href="#">Postgraduate</a>
-                          <a href="#">International</a>
+                        <div class="dropdown-contenter" <% if (index||academics||about||news||research){%> style = "display: none"<%} %>>
+                          <a class="postgraduate" href="Javascript:void(0)">Postgraduate</a>
+                          <a class="international" href="Javascript:void(0)">International</a>
                         </div>
                 </div>
                 <div class="dropdowner">
@@ -90,20 +90,20 @@
 
                 <div class="dropdowner">
                         <button class="dropbtner" id="dropbtner"><a href="/research">Research</a>
-                          <i class="fa fa-caret-down"></i>
+                          <i <% if (index||academics||admissions||news||about){%> style = "display: none"<%} %> class="fa fa-caret-down"></i>
                         </button>
-                        <div class="dropdown-contenter">
-                          <a href="#">Supervisors</a>
-                          <a href="#">Latest Research</a>
-                          <a href="#">Funding</a>
-                          <button class="dropbtnerin" ><a href="">Collaborations<i class="fa fa-caret-right" style="margin-left: 5px"></i></a>
+                        <div class="dropdown-contenter " <% if (index||academics||admissions||news||about){%> style = "display: none"<%} %>>
+                          <a class="supervisors" href="Javascript:void(0)">Supervisors</a>
+                          <a class="latest" href="Javascript:void(0)">Latest Research</a>
+                          <a class="funding" href="Javascript:void(0)">Funding</a>
+                          <button class="dropbtnerin" ><a href="Javascript:void(0)" class="collaboration">Collaborations<i class="fa fa-caret-right" style="margin-left: 5px"></i></a>
                             
                             <div class="dropdown-contenterin">
-                                <a href="#">National Population Council</a>
-                                <a href="#">Ghana Statistical Service</a>
-                                <a href="#">Ghana Health Service</a>
-                                <a href="#">International Biometric Society (IBS)</a>
-                                <a href="#">Tropical Epidemiological Group (TEG) - LSHTM</a>
+                                <a class="NPC" href="Javascript:void(0)">National Population Council</a>
+                                <a class="GSS" href="Javascript:void(0)">Ghana Statistical Service</a>
+                                <a class="GHS" href="Javascript:void(0)">Ghana Health Service</a>
+                                <a class="IBS" href="Javascript:void(0)">International Biometric Society (IBS)</a>
+                                <a class="TEG" href="Javascript:void(0)">Tropical Epidemiological Group (TEG) - LSHTM</a>
                           </button>
 
                         </div>

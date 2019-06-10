@@ -8,15 +8,15 @@
     <div class="content">
         <hr class="line-divider" size="240">
         <ul>
-            <li><a href="">Academics Menu</a></li>
+            <li><a href=""><b><u>Academics Menu</u></b></a></li>
           
-            <li class="lister" id="course">Course schedule</li> 
-            <li class="lister" id="postgraduate">Postgraduate</li>
-            <li class="lister" id="support"><a href="Javascript:Void(0);">Student support</a></li>
-            <li class="lister" id="short"><a href="Javascript:Void(0);">Short courses</a></li>
-            <li class="lister" id="training"><a href="Javascript:Void(0);">Training</a></li>
-            <li class="lister" id="work"><a href="Javascript:Void(0);">Workshop</a></li>
-            <li class="lister" id="calendar"><a href="Javascript:Void(0);">Academic calendar</a></li>
+            <li class="courses" id="course">Course schedule</li> 
+            <li class="postgraduates" id="postgraduate">Postgraduate</li>
+            <li class="students" id="support"><a href="Javascript:Void(0);">Student support</a></li>
+            <li class="short-courses" id="short"><a href="Javascript:Void(0);">Short courses</a></li>
+            <li class="training" id="training"><a href="Javascript:Void(0);">Training</a></li>
+            <li class="workshop" id="work"><a href="Javascript:Void(0);">Workshop</a></li>
+            <li class="calendar" id="calendar"><a href="Javascript:Void(0);">Academic calendar</a></li>
             
             
            
@@ -56,59 +56,87 @@
     </div>
   </div>
 </div>
+<%- include('includes/foot.ejs') %>
 
 
 <script>
         $(document).ready(function(){
             var p = document.getElementById('getting-started');
             var text = document.getElementsByClassName('mytext');
+
+            var courses = document.getElementsByClassName('courses');
+            var postgraduates = document.getElementsByClassName('postgraduates');
+            var students = document.getElementsByClassName('students');
+            var shortcourses = document.getElementsByClassName('short-courses');
+            var training = document.getElementsByClassName('training');
+            var workshop = document.getElementsByClassName('workshop');
+            var calendar = document.getElementsByClassName('calendar');
+
+            var i;
+            for (i = 0; i < courses.length; i++) {
+                 courses[i].onclick = function() {
+                    p.innerText = 'ACADEMICS';
+                    text[0].innerText = 'COURSE';
+
+                 }
+            }
+
+            for (i = 0; i < postgraduates.length; i++) {
+                 postgraduates[i].onclick = function() {
+                    p.innerText = 'ACADEMICS';
+                    text[0].innerText = 'POSTGRADUATE';
+
+                 }
+            }
+
+            for (i = 0; i < students.length; i++) {
+                 students[i].onclick = function() {
+                    p.innerText = 'ACADEMICS';
+                   text[0].innerText = 'STUDENT SUPPORT';
+
+                 }
+            }
+
+            for (i = 0; i < shortcourses.length; i++) {
+                 shortcourses[i].onclick = function() {
+                    p.innerText = 'ACADEMICS';
+                   text[0].innerText = 'SHORT COURSES';
+
+                 }
+            }
+
+            for (i = 0; i < training.length; i++) {
+                 training[i].onclick = function() {
+                    p.innerText = 'ACADEMICS';
+                    text[0].innerText = 'TRAINING';
+                  
+
+                 }
+            }
             
-            $('#course').on('click', function(){
-                p.innerText = 'This is a brief History of the Department';
-                text[0].innerText = 'COURSE';
-                
-            })
- 
-          
-            $('#postgraduate').on('click', function(){
-                p.innerText = 'we display our Objective and vision here';
-                text[0].innerText = 'POSTGRADUATE';
-             //    text[0].style.color = 'red';
-                
-            })
+
+            for (i = 0; i < workshop.length; i++) {
+                 workshop[i].onclick = function() {
+                    p.innerText = 'ACADEMICS';
+                    text[0].innerText = 'WORKSHOP';
+                   
+                  
+
+                 }
+            }
+
+            for (i = 0; i < calendar.length; i++) {
+                 calendar[i].onclick = function() {
+                    p.innerText = 'ACADEMICS';
+                    text[0].innerText = 'ACADEMIC CALENDAR';
+                   
+                   
+                  
+
+                 }
+            }
             
- 
-            $('#support').on('click', function(){
-                p.innerText = 'we display about our faculty here';
-                text[0].innerText = 'STUDENT SUPPORT';
-             //    text[0].style.color = 'red';
-         })
 
-         $('#short').on('click', function(){
-                p.innerText = 'we display about our faculty here';
-                text[0].innerText = 'SHORT COURSES';
-             //    text[0].style.color = 'red';
-         })
-
-         $('#training').on('click', function(){
-                p.innerText = 'we display about our faculty here';
-                text[0].innerText = 'TRAINING';
-             //    text[0].style.color = 'red';
-         })
- 
-
-         $('#work').on('click', function(){
-                p.innerText = 'we display about our faculty here';
-                text[0].innerText = 'WORKSHOP';
-             //    text[0].style.color = 'red';
-         })
-
-
-         $('#calendar').on('click', function(){
-                p.innerText = 'we display about our faculty here';
-                text[0].innerText = 'ACADEMIC CALENDAR';
-             //    text[0].style.color = 'red';
-         })
  
         })
         

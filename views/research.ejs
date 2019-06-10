@@ -8,20 +8,20 @@
     <div class="content">
         <hr class="line-divider" size="240">
         <ul>
-            <li><a href="">Research</a></li>
+            <li><a href=""><b><u>Research Menu</u></b></a></li>
          
-            <li class="lister" id="supervisor">Supervisors</li> 
-            <li class="lister" id="latest">Latest research</li>
-            <li class="lister" id="funding"><a href="Javascript:Void(0);">Funding</a></li>
-            <li class="list" id="collaboration"><a href="Javascript:Void(0);">Collaborations</a></li>
+            <li class="supervisors" id="supervisor">Supervisors</li> 
+            <li class="latest">Latest research</li>
+            <li class="funding" id="funding">Funding</li>
+            <li class="list" id="collaboration">Collaborations</li>
             <div class="next" style="margin-top: -25px;">
                 <ul>
-                    <li id="npc">National Population Council</li>
-                    <li id="gss">Ghana statistical Service</li>
-                    <li id="ghs">Ghana Health Service</li>
+                    <li class="NPC" id="npc">National Population Council</li>
+                    <li class="GSS" id="gss">Ghana statistical Service</li>
+                    <li class="GHS" id="ghs">Ghana Health Service</li>
                     
-                    <li id="ibs">International Biometric Society (IBS)</li>
-                    <li id="teg">Tropical Epidemiological Group (TEG) - LSHTM</li>
+                    <li class="IBS" id="ibs">International Biometric Society (IBS)</li>
+                    <li class="TEG" id="teg">Tropical Epidemiological Group (TEG) - LSHTM</li>
                 </ul>
             </div>
             
@@ -46,68 +46,106 @@
     </div>
   </div>
 </div>
+<%- include('includes/foot.ejs') %>
 
 <script>
         $(document).ready(function(){
             var p = document.getElementById('getting-started');
             var text = document.getElementsByClassName('mytext');
+
+            var supervisors = document.getElementsByClassName('supervisors');
+            var latest = document.getElementsByClassName('latest');
+            var funding = document.getElementsByClassName('funding');
+            var collaboration = document.getElementsByClassName('collaboration');
+            var collaborationid = document.getElementById('collaboration');
+            var npc = document.getElementsByClassName('NPC');
+            var gss = document.getElementsByClassName('GSS');
+            var ghs = document.getElementsByClassName('GHS');
+            var ibs = document.getElementsByClassName('IBS');
+            var teg = document.getElementsByClassName('TEG');
+           
+            var i;
+            for(i = 0; i < supervisors.length; i++){
+                supervisors[i].onclick = function(){
+                    p.innerText = 'RESEARCH';
+                   text[0].innerText = 'FIND  A SUPERVISOR';
+
+                }
+            }
+            for(i = 0; i < latest.length; i++){
+                latest[i].onclick = function(){
+                    p.innerText = 'RESEARCH';
+                   text[0].innerText = 'LATEST RESEARCH';
+
+                }
+            }
             
-            $('#supervisor').on('click', function(){
-                p.innerText = 'This is a brief History of the Department';
-                text[0].innerText = 'SUPERVISOR';
-                
-            })
- 
-          
-            $('#latest').on('click', function(){
-                p.innerText = 'we display our Objective and vision here';
-                text[0].innerText = 'LATEST RESEARCH';
-             //    text[0].style.color = 'red';
-                
-            })
+            for(i = 0; i < funding.length; i++){
+                funding[i].onclick = function(){
+                    p.innerText = 'RESEARCH';
+                   text[0].innerText = 'FUNDING OPTIONS';
+
+                }
+            }
             
- 
-            $('#funding').on('click', function(){
-                p.innerText = 'we display about our faculty here';
-                text[0].innerText = 'FUNDING';
-             //    text[0].style.color = 'red';
-         })
 
-         $('#collaboration').on('click', function(){
-                p.innerText = 'we display about our faculty here';
-                text[0].innerText = 'COLLABORATIONS';
-             //    text[0].style.color = 'red';
-         })
- 
-         $('#npc').on('click', function(){
-                p.innerText = 'we display about our faculty here';
-                text[0].innerText = 'NATIONAL POPULATION COUNCIL';
-             //    text[0].style.color = 'red';
-         })
+            $(collaborationid).on('click', function(){
+                p.innerText = 'RESEARCH';
+                   text[0].innerText = 'COLLABORATIONS';
+            })
 
-         $('#gss').on('click', function(){
-                p.innerText = 'we display about our faculty here';
-                text[0].innerText = 'GHANA STATISTICAL SERVICE';
-             //    text[0].style.color = 'red';
-         })
+            for(i = 0; i < collaboration.length; i++){
+                collaboration[i].onclick = function(){
+                    p.innerText = 'RESEARCH';
+                   text[0].innerText = 'COLLABORATIONS';
 
-         $('#ghs').on('click', function(){
-                p.innerText = 'we display about our faculty here';
-                text[0].innerText = 'GHANA HEALTH SERVICE';
-             //    text[0].style.color = 'red';
-         })
+                }
+            }
+            
 
-         $('#ibs').on('click', function(){
-                p.innerText = 'we display about our faculty here';
-                text[0].innerText = 'INTERNATIONAL BIOMETRIC SOCIETY (IBS)';
-             //    text[0].style.color = 'red';
-         })
+            for(i = 0; i < npc.length; i++){
+                npc[i].onclick = function(){
+                    p.innerText = 'RESEARCH';
+                   text[0].innerText = 'NATIONAL POPULATION COUNCIL';
 
-         $('#teg').on('click', function(){
-                p.innerText = 'we display about our faculty here';
-                text[0].innerText = 'TROPICAL EPIDEMIOLOGICAL GROUP (TEG) - LSHTM';
-             //    text[0].style.color = 'red';
-         })
+                }
+            }
+
+            for(i = 0; i < gss.length; i++){
+                gss[i].onclick = function(){
+                    p.innerText = 'RESEARCH';
+                   text[0].innerText = 'GHANA STATISTICAL SERVICE';
+
+                }
+            }
+
+            for(i = 0; i < ghs.length; i++){
+                ghs[i].onclick = function(){
+                    p.innerText = 'RESEARCH';
+                   text[0].innerText = 'GHANA HEALTH SERVICE';
+
+                }
+            }
+
+            for(i = 0; i < ibs.length; i++){
+                ibs[i].onclick = function(){
+                    p.innerText = 'RESEARCH';
+                   text[0].innerText = 'INTERNATIONAL BIOMETRIC SOCIETY (IBS)';
+
+                }
+            }
+
+            for(i = 0; i < teg.length; i++){
+                teg[i].onclick = function(){
+                    p.innerText = 'RESEARCH';
+                   text[0].innerText = 'TROPICAL EPIDEMIOLOGICAL GROUP (TEG) - LSHTM';
+
+                }
+            }
+
+    
+
+        
  
         })
         
